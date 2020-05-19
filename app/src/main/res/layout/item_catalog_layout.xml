@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/catalogItemRootCl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="3dp"
+    android:layout_marginBottom="3dp"
+    android:background="@color/darkHakki"
+    android:elevation="3dp"
+    android:padding="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/catalogItemPicCv"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/catalogItemPicIv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="false"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_catalog_item_stub" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/catalogItemDetailsCl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/lightHakki"
+        android:minHeight="@dimen/cart_item_pic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/catalogItemPicCv"
+        app:layout_constraintTop_toBottomOf="@+id/catalogItemPicCv">
+
+        <TextView
+            android:id="@+id/catalogItemMainPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/catalogItemDescr"
+            tools:text="25 000 ₽" />
+
+        <TextView
+            android:id="@+id/catalogItemRawPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/catalogItemMainPrice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/catalogItemMainPrice"
+            app:layout_constraintTop_toTopOf="@+id/catalogItemMainPrice"
+            tools:text="32 000 ₽"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/catalogItemName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Автомат АК-47" />
+
+        <TextView
+            android:id="@+id/catalogItemDescr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/catalogItemName"
+            tools:text="Описание товара" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/catalogItemAddToCartIv"
+        android:layout_width="@dimen/add_to_cart_btn_size"
+        android:layout_height="@dimen/add_to_cart_btn_size"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/white"
+        android:elevation="6dp"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="@+id/catalogItemPicCv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/catalogItemPicCv"
+        app:srcCompat="@drawable/ic_add_to_cart_black" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

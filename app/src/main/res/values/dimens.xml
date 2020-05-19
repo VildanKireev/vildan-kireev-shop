@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="header_vertical_margin">16dp</dimen>
+    <dimen name="header_height">56dp</dimen>
+    <dimen name="cart_item_pic">96dp</dimen>
+    <dimen name="touchable_size">48dp</dimen>
+    <dimen name="header_label_font_size">22sp</dimen>
+    <dimen name="cart_count_top_margin">2dp</dimen>
+    <dimen name="checkout_item_start_margin">24dp</dimen>
+    <dimen name="checkout_top_margin_medium">16dp</dimen>
+    <dimen name="checkout_top_margin_small">12dp</dimen>
+    <dimen name="elevation_header">5dp</dimen>
+    <dimen name="add_to_cart_btn_size">42dp</dimen>
+</resources>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.catalog.CatalogActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/catalogHeaderCl"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/header_height"
+        android:background="@color/hakki"
+        android:elevation="@dimen/elevation_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/catalogHeaderLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:singleLine="true"
+            android:text="@string/catalog_header"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/header_label_font_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/catalogOpenCartIv"
+            app:layout_constraintStart_toEndOf="@+id/catalogBackIv"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/catalogBackIv"
+            android:layout_width="@dimen/touchable_size"
+            android:layout_height="@dimen/touchable_size"
+            android:layout_marginStart="8dp"
+            android:background="@color/hakki"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+
+        <ImageView
+            android:id="@+id/catalogOpenCartIv"
+            android:layout_width="@dimen/touchable_size"
+            android:layout_height="@dimen/touchable_size"
+            android:layout_marginEnd="16dp"
+            android:background="@color/hakki"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="@+id/catalogHeaderLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/catalogHeaderLabel"
+            app:srcCompat="@drawable/ic_shopping_cart" />
+
+        <TextView
+            android:id="@+id/catalogCartItemsCountTv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/hakki"
+            android:fontFamily="sans-serif-black"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/catalogOpenCartIv"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="9+"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/catalogSearchCl"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/touchable_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/catalogOpenCartIv"
+            app:layout_constraintStart_toEndOf="@+id/catalogBackIv"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <SearchView
+                android:id="@+id/catalogSearchView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layoutDirection="rtl"
+                android:queryBackground="@color/lightHakki"
+                android:queryHint="@string/catalog_search_hint"
+                android:searchIcon="@drawable/ic_search_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </SearchView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/catalogProductsRv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/lightHakki"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catalogHeaderCl" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

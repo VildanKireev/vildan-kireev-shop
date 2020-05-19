@@ -1,3 +1,46 @@
 <resources>
-    <string name="app_name">vildan-kireev-shop</string>
+    <string name="app_name">Оружейный магазин</string>
+
+    <!--Launch-->
+    <string name="err_connection_error">Не удалось установить соединение с сервером. Проверьте подключение к Интернету.</string>
+
+    <!--Categories-->
+    <string name="categories_header">Категории оружия</string>
+    <string name="recently_viewed">Просмотренное:</string>
+
+    <!--Catalog-->
+    <string name="catalog_header">Каталог оружия</string>
+    <string name="catalog_search_hint">Введите название</string>
+
+    <!--Detailed-->
+    <string name="detailed_attributes_label">Характеристики:</string>
+    <string name="add_to_cart">Добавить в корзину</string>
+
+    <!-- Cart-->
+    <string name="cart_header">Корзина</string>
+    <string name="cart_total_price_label">Итого:</string>
+    <string name="cart_checkout">Оформить заказ</string>
+    <string name="empty_cart_label">Корзина пуста</string>
+    <string name="item_delete_label">Удалить</string>
+    <string name="item_piece_label">шт.</string>
+
+    <!--Checkout-->
+    <string name="checkout_header">Оформление заказа</string>
+    <string name="checkout_personal_data">Персональная информация</string>
+    <string name="checkout_hint_last_name">Фамилия</string>
+    <string name="checkout_hint_first_name">Имя</string>
+    <string name="checkout_hint_phone">Телефон</string>
+    <string name="checkout_payment_method">Способ оплаты</string>
+    <string name="checkout_payment_cash">Наличными при получении</string>
+    <string name="checkout_payment_card">Банковской картой</string>
+    <string name="checkout_order_details">Итого (с учетом скидки)</string>
+    <string name="checkout_cart_items">Товары в корзине</string>
+    <string name="checkout_discount">Скидка</string>
+    <string name="checkout_minus">-</string>
+    <string name="checkout_total_price">Итого к оплате</string>
+    <string name="checkout_make_order">Оформить заказ</string>
+    <string name="checkout_items_count">(%1$d)</string>
+    <string name="message_order_processed">Заказ успешно оформлен!</string>
+    <string name="err_incorrect_fields_value">Заполните поля!</string>
+    <string name="err_empty_order">Добавьте товары!</string>
 </resources>
